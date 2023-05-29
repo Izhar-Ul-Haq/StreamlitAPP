@@ -6,4 +6,6 @@ my_bar = st.progress(0, text=progress_text)
 
 for percent_complete in range(100):
     time.sleep(0.1)
-    my_bar.progress(percent_complete + 1, text=progress_text)
+    complete = my_bar.progress(percent_complete + 1, text=progress_text)
+    if percent_complete==100-1:
+        st.success("Hurrah!!!")
